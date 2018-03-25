@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Crypto</title>
+</head>
+
+  <body>
+
+   <h3>Cryptocurrency Prices</h3>
+    <div class="container" id="app">
+
+       <div v-for="(result, index) in results">
+
+          <div class="item crypto">
+            <p> {{ index }} </p>
+          </div>
+          <div class="item result">
+            <p>$ {{ result.USD }}</p>
+          </div>
+          <div class="item result">
+            <p> &#8364 {{ result.EUR }}</p>
+          </div>
+          <div class="item result">
+            <p>  £ {{ result.GBP }}</p>
+          </div>
+
+  </div>
+</div>
+
+
+    <script src="main.js"></script>
+   
+  </body>
+</html>

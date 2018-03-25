@@ -1,0 +1,60 @@
+:root {
+  --blue: #2E2A42;
+  --green: #234B59;
+  --yellow: #FEEE86;
+
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--blue);
+}
+
+
+.item {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px dotted var(--blue);
+  border-radius: 5px;
+  font-size: 22px;
+  background-color: var(--green);
+  color: var(--yellow);
+  box-shadow: 0 1px 1px 0 var(--yellow);
+}
+
+.container{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 200px);
+	justify-content: center;
+    align-items: center;
+	padding: 40px;
+}
+
+.crypto{
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.result p{
+	opacity: .9;
+}
+
+h3{
+	text-align: center;
+	padding: 30px;
+	color: var(--yellow);
+	font-size: 42px;
+}
+
