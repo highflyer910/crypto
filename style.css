@@ -58,3 +58,19 @@ h3{
 	font-size: 42px;
 }
 
+.split-credit {
+    display: grid;
+    padding-top: 10px;
+    justify-content: center;
+  }
+
+  .split-credit p {
+    font-size: 12px;
+    line-height: 5px; 
+    color: var(--yellow);
+  }
+
+  .split-credit p a {
+      font-weight: bold;
+      color: var(--yellow); 
+   }
