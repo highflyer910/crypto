@@ -53,9 +53,15 @@ body {
 
 h3{
 	text-align: center;
-	padding: 30px;
+	padding: 30 0px;
 	color: var(--yellow);
 	font-size: 42px;
+}
+
+h5{
+  text-align: center;
+  color: var(--yellow);
+  opacity: .8;
 }
 
 .split-credit {
