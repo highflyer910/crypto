@@ -20,6 +20,11 @@ body {
   background-color: var(--blue);
 }
 
+img{
+  width: 230px;
+  align-self: center;
+}
+
 
 .item {
   display: grid;
@@ -41,6 +46,12 @@ body {
     align-items: center;
 	padding: 40px;
 }
+
+.img{
+  width: 150px;
+  
+}
+
 
 .crypto{
 	font-weight: bold;
