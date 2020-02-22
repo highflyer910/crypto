@@ -1,4 +1,4 @@
-# crypto_app
+# Cryptocurrency tracker
 
 > My cat&#39;s pajamas Nuxt.js project
 
