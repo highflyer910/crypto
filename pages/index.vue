@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3>Cryptocurrency Prices</h3>
-   <h5>(Real-time Updating)</h5>
+    <h5>(Real-time Updating)</h5>
    
     <div class="container" id="app">
 
@@ -94,7 +94,7 @@ body {
   height: 60px;
   background-color: var(--green);
   color: var(--yellow);
-  box-shadow: 0 1px 1px 0 var(--yellow);
+  box-shadow: 0 1.5px 1.5px 0 var(--yellow);
 }
 
 .container{
@@ -149,5 +149,21 @@ img{
   .split-credit p a {
       font-weight: bold;
       color: var(--yellow); 
-   }
+ }
+
+@media screen and (max-width: 600px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .item{
+    padding: 0 60px;
+    width: 100%;
+  }
+}
+
 </style>
