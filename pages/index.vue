@@ -10,6 +10,7 @@
           <div class="item crypto">
             <p> {{ index }} </p>
           </div>
+
           <div class="item result">
             <p>$ {{ result.USD }}</p>
           </div>
@@ -19,14 +20,12 @@
           <div class="item result">
             <p>  £ {{ result.GBP }}</p>
           </div>
-
-  </div> 
-</div>
+      </div> 
+    </div>
     <div class="split-credit">
        <div><img class="img" src="../assets/crypto.svg"></div>
-
         <p>&copy; Made with ❤ by <a href="https://github.com/highflyer910/crypto">Thea</a></p> 
-  </div>
+    </div>
 </div>
 </template>
 
@@ -44,7 +43,7 @@ export default {
       }, 
       methods:{
       upDate: function() {
-            axios.get("https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC&tsyms=USD,EUR,GBP").then(response => {
+            axios.get("https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,USDT&tsyms=USD,EUR,GBP").then(response => {
               this.results = response.data
             })
        }, 
@@ -85,7 +84,7 @@ body {
 
 
 .item {
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
   border-top: 1px dotted var(--blue);
@@ -135,21 +134,21 @@ img{
 }
 
 .split-credit {
-    display: grid;
-    padding: 20px;
-    justify-content: center;
-  }
+  display: grid;
+  padding: 20px;
+  justify-content: center;
+}
 
-  .split-credit p {
-    font-size: 12px;
-    line-height:15px; 
-    color: var(--yellow);
-  }
+.split-credit p {
+  font-size: 12px;
+  line-height:15px; 
+  color: var(--yellow);
+}
 
-  .split-credit p a {
-      font-weight: bold;
-      color: var(--yellow); 
- }
+.split-credit p a {
+  font-weight: bold;
+  color: var(--yellow); 
+}
 
 @media screen and (max-width: 600px) {
   .container{
@@ -160,9 +159,10 @@ img{
     width: 100%;
   }
 
-  .item{
-    padding: 0 60px;
-    width: 100%;
+  .crypto{
+    padding: 0 120px;
+    max-width: 120px;
+    font-size: 18px;
   }
 }
 
