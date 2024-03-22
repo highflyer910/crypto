@@ -1,62 +1,11 @@
-<template>
-  <div>
-    <h3>Cryptocurrency Prices</h3>
-    <h5>(Real-time Updating)</h5>
-   
-    <div class="container" id="app">
-
-       <div v-for="(result, index) in results">
-
-          <div class="item crypto">
-            <p> {{ index }} </p>
-          </div>
-
-          <div class="item result">
-            <p>$ {{ result.USD }}</p>
-          </div>
-          <div class="item result">
-            <p> &#8364 {{ result.EUR }}</p>
-          </div>
-          <div class="item result">
-            <p>  £ {{ result.GBP }}</p>
-          </div>
-      </div> 
-    </div>
-    <div class="split-credit">
-       <div><img class="img" src="../assets/crypto.svg"></div>
-        <p>&copy; Made with ❤ by <a href="https://github.com/highflyer910/crypto">Thea</a></p> 
-    </div>
-</div>
-</template>
-
-<script>
-import axios from 'axios';  
-export default {
-    name: 'app',
-    data:() => ({
-     results: []
-        }),
-
-     mounted() {
-      this.upDate();
-      this.timer = setInterval(this.upDate, 1000)
-      }, 
-      methods:{
-      upDate: function() {
-            axios.get("https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,USDT&tsyms=USD,EUR,GBP").then(response => {
-              this.results = response.data
-            })
-       }, 
-      cancelAutoUpdate: function(){
-            clearInterval(this.timer)
-       },
-
-       beforeDestroy() {
-         clearInterval(this.timer)
-       }
-    }
-}
+<script setup>
+import CryptoPrices from './components/CryptoPrices.vue'
 </script>
+
+<template>
+  <CryptoPrices/>
+  
+</template>
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700");
@@ -165,5 +114,25 @@ img{
     font-size: 18px;
   }
 }
+
+html {
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 
 </style>
