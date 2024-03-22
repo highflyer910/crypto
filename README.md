@@ -1,6 +1,6 @@
 # Cryptocurrency Tracker
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/0d384cb5-4c16-40a5-8581-39546575ee63/deploy-status)](https://app.netlify.com/sites/cryptoid/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c1636a65-5793-431e-a61f-bf565b79dbd4/deploy-status)](https://app.netlify.com/sites/cryptoid/deploys)
 
 A simple real-time cryptocurrency price tracking application built with Vue 3 and Vite.
 
