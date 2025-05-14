@@ -48,7 +48,7 @@ body {
 .container{
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(3, 200px);
+  grid-template-columns: repeat(4, 200px);
   justify-content: center;
   align-items: center;
   padding: 40px;

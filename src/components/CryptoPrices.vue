@@ -36,7 +36,7 @@ import axios from 'axios';
 const results = ref([]);
 
 const upDate = () => {
-  axios.get("https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,USDT&tsyms=USD,EUR,GBP")
+  axios.get("https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,PI,USDT,&tsyms=USD,EUR,GBP")
     .then(response => {
       results.value = response.data;
     });
